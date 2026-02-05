@@ -1,7 +1,9 @@
 #!/bin/bash
 
- echo "Ram  :: Hello Sita, How are you?"
- echo "Sita :: Hi Ram, I am fine. How are you doing?"
- echo "Ram  :: doing good. what are you learning?"
- echo "Sita ::  I am learning shell, what about you?"
+PERSON1=Ramesh  # no space between value and =
+PERSON2=Suresh
+ echo "$PERSON1  :: Hello $PERSON2, How are you?"
+ echo "$PERSSON2 :: Hi $PERSON1, I am fine. How are you doing?"
+ echo "$PERSON1  :: doing good. what are you learning?"
+ echo "$PERSON2  ::  I am learning shell, what about you?"
  
