@@ -5,4 +5,4 @@ NUM2=60
 
 SUM=$((NUM+NUM2))
 
-echo "sum is: $sum"
+echo "sum is: $SUM"
