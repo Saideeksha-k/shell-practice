@@ -20,7 +20,7 @@ VALIDATE(){
         echo "$2 ....Success" | tee -a $LOGS_FILE
     fi
 }
-echo "Installing Nginx" 
+
 
 dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Installing Nginx"
