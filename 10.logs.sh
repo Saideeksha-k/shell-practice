@@ -9,6 +9,7 @@ if [ $USER_ID -ne 0 ]; then
     exit 1
 fi
  
+ 
  mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
@@ -21,13 +22,13 @@ VALIDATE(){
 }
 echo "Installing Nginx" 
 
-dnf install nginx -y $>> $LOGS_FILE
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Installing Nginx"
 
-dnf install mysql -y $>> $LOGS_FILE
+dnf install mysql -y &>> $LOGS_FILE
 VALIDATE $? "Installing mysql"
 
-dnf install nodejs -y $>> $LOGS_FILE
+dnf install nodejs -y &>> $LOGS_FILE
 VALIDATE $? "Installing nodejs"
 
 
