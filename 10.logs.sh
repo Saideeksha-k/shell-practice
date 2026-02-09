@@ -5,7 +5,7 @@ LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/$0.log"
 
 if [ $USER_ID -ne 0 ]; then
-    echo "please run this script with root user"
+    echo "please run this script with root user" | tee -a $LOGS_FILE
     exit 1
 fi
  
@@ -14,10 +14,10 @@ fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "$2 ....Failure"
+        echo "$2 ....Failure" | tee -a $LOGS_FILE
         exit 1
     else
-        echo "$2 ....Success"
+        echo "$2 ....Success" | tee -a $LOGS_FILE
     fi
 }
 echo "Installing Nginx" 
